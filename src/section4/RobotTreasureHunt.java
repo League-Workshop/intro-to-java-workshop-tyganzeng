@@ -17,7 +17,7 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	// 1. Create a new mini robot (type "mini" inside the parentheses)
 	Robot r = new Robot("mini");
-	
+	Robot q = new Robot(100,100);
 	private void goUp() throws InterruptedException {
 		// 2. Make the robot move up the screen (use setAngle(angle) and microMove(distance))
 		r.setAngle(0);
@@ -26,8 +26,10 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 
 	private void goDown() throws InterruptedException{
 		// 3. make the robot move down the screen (use setAngle(angle) and microMove(distance))
+		
 		r.setAngle(180);
 		r.microMove(5);
+		
 	}
 
 	private void turnLeft() throws InterruptedException{
@@ -111,7 +113,6 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 			e.printStackTrace();
 		}
 	}
-
 
 	public static void main (String[] args) throws MalformedURLException {
 		new RobotTreasureHunt().go();
